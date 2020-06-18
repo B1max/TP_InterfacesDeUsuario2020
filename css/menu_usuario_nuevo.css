@@ -1,0 +1,81 @@
+.uNUEVO-menu{
+  position: absolute;
+  width: 125px;
+  height: 40px;
+  top:0px;
+  right: 0px;
+  background-color: coral;
+  background: #519856;
+  border: 2px solid #CB1DC4;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+
+.MunbtnMisSolicitudes{
+  position: absolute;
+  width: 125px;
+  height: 40px;
+  top: 40px;
+  right: 0px;
+  background-color: coral;
+  background: #519856;
+  border: 2px solid #CB1DC4;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+
+}
+
+.MunbtnUsuarios{
+  position: absolute;
+  width: 125px;
+  height: 40px;
+  top:80px;
+  right: 0px;
+  background-color: coral;
+  background: #519856;
+  border: 2px solid #CB1DC4;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.MunbtnSalir{
+  position: absolute;
+  width: 125px;
+  height: 40px;
+  top:120px;
+  right: 0px;
+  background-color: coral;
+  background: #519856;
+  border: 2px solid #CB1DC4;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}

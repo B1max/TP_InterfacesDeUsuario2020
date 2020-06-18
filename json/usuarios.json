@@ -1,0 +1,20 @@
+{
+    "Usuarios": [
+        {
+            "user": "30337591",
+            "pass": "Admin1234",
+            "avatar": "https://gravatar.com/avatar/eb1e0a45a4c29acd4567748e432df5a8?s=100&d=robohash&r=x",
+            "nombre": "30337591",
+            "activo": "si",
+            "fecha": "2020-06-04"
+        },
+        {
+            "user": "87654321",
+            "pass": "Admin1234",
+            "avatar": "https://gravatar.com/avatar/ab3ef817e400dbddf665041ca1a55051?s=100&d=mp&r=x",
+            "nombre": "87654321",
+            "activo": "si",
+            "fecha": "2020-05-03"
+        }
+    ]
+}

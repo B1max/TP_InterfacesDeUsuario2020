@@ -1,0 +1,31 @@
+.DIV_PPimgBienvenida{
+  position: absolute;
+  width: 640px;
+  height: 500 px;
+  margin-left: -320px;
+  left: 50%;
+  margin-top: -250px;
+  top: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/fondoBienvenida.png") ;
+  background-color: blueviolet;
+  border-radius: 0px 80px 0px 50px;
+}
+
+@media all and (max-device-width: 480px){
+  .DIV_PPimgBienvenida{
+    position: absolute;
+    width: 320px;
+    height: 250px;
+    margin-left: -160px;
+    left: 50%;
+    margin-top: -125px;
+    top: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/fondoBienvenida.png") ;
+    background-color: blueviolet;
+    border-radius: 0px 40px 0px 40px;
+  }
+}

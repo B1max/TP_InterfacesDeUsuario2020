@@ -1,0 +1,451 @@
+ .contenedor{
+        width: 80%;
+        /* min-width: 481px; */
+        max-width: 1000px ;
+        margin: 0 auto;
+        overflow: hidden;
+        /* height: auto;
+        height : 900px */
+     }
+
+    body{
+        overflow: hidden;
+    }
+    html{
+       overflow: hidden;
+    }
+
+
+    .rectangulo-superior{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        margin: 0px;
+        padding: 0px;
+        background: #B78B5C;
+        margin: 0px;
+        padding: 0px;
+        /* border-radius: 0px 80px; */
+    }
+    .rectangulo-superior-flotante{
+        
+        /* rectangulo-superior-flotante */
+    
+    
+    position: absolute;
+    width: auto;
+    height: 122px;
+    left: 0px;
+    right: 16px;
+    top: 25px;
+    
+    background: rgba(92, 183, 96, 0.8);
+    border-radius: 0px 60px;
+    }
+
+
+    .rectangulo-inferior{
+        position: absolute;
+        width: auto;
+        max-width: 1440px;
+        right: 0px;
+        top: 0px;
+        height: 200px;
+        /* margin-left: -720px; */
+        margin: 0px;
+        padding: 0px;
+        left: 50%;
+        right: 0px;
+        background: #B78B5C;
+        bottom: 0px;
+        border-radius: 80px 0px;
+    }
+
+    .texto-login{
+        position: absolute;
+        width: 126px;
+        height: 20px;
+        right: 35px;
+        top: 80px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .texto-rectangulo-superior{
+        position: absolute;
+        width: 1064px;
+        height: 150px;
+        left: 184px;
+        top: 780px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 75px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .texto-bienvenida{
+        position: absolute;
+        width: 1180px;
+        /* height: 235px; */
+        height: auto;
+        right: 50%;
+        margin-left: -590px;
+        left: 50%;
+        top: 20%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 75px;
+        text-align: center;
+        color: #5CB760;
+    }
+
+    .img-logo{
+        position: absolute;
+        width: 260px;
+        height: 100px;
+        margin-left: 0px;
+        left: 5%;
+        top: 10px;
+        /* right: 0px; */
+        /* margin: 0px; */
+        /* padding: 0px; */
+        background-image: url("../img/logo.png") ;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .parrafoSuperior{
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 35%;
+        right: 20%;
+        bottom: 0px;
+        top: 20px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+
+    .img-fondo{
+        position: absolute;
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        max-height: 100%;
+        margin-left: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 0px;
+        padding: 0px;
+        background: url("../img/img-fondo3.png");
+        /* border-radius: 0px 70px 0px 75px; */
+        background-size: cover;
+    }
+    
+
+    .rectangulo-info-inferior{
+        
+        position: absolute;
+        width:auto;
+        height: 169px;
+        
+        left: 15px;
+        right: 15px;
+        bottom: 55px;
+        background: rgba(92, 183, 96, 0.65);
+        border-radius: 0px 75px;
+    }
+    
+    .texto-rectangulo-inferior{
+        position: absolute;
+        width: auto;
+        height: auto;
+        margin-left: -532px;
+        left: 50%;
+        margin-right: -532px;
+        right: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 45px;
+        line-height: 75px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .contacto{
+        position: absolute;
+        width: 400px;
+        height: 40px;
+        margin-left: -200px;
+        left: 50%;
+        margin-bottom: 5px;
+        bottom: 0%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .contenedor-img-fondo{
+            border-radius: 0px 15px 0px 15px;
+            bottom: 5px;
+            top: 5px;
+        }
+
+    .contenedor-parrafo-bienvenida{
+            position: absolute;
+            width: auto;
+            height: 100px;
+            left: 8px;
+            right: 8px;
+            top:150px;
+            
+    }
+
+
+
+    
+   /* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 620  PX   <----////////     */
+    @media all and (max-device-width: 480px){
+
+        body{
+            overflow: hidden;
+        }
+        html{
+           overflow: hidden;
+        }
+
+        .contenedor{
+           width: 480px;
+           height: 540px;
+           max-width: 480px;
+           margin: 0px;
+           padding: 0px;
+           overflow: hidden;
+        } 
+
+        .rectangulo-superior{
+            position: absolute;
+            width: auto;
+            height: 100%;
+            
+            left: 0px;
+            right: 0px;
+            top: 0px;
+
+            margin: 0px;
+            padding: 0px;
+        }
+
+/*
+        .contenedor-img-fondo{
+            height: auto;
+            bottom: 25px;
+            top: 25px;
+        }
+    */
+
+        .img-fondo{
+            position: absolute;
+            width: auto;
+            height: auto;
+            max-height: 706px;
+            /* bottom: 25px; */
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin:0px;
+            background-size: fixed;
+            background: url("../img/img-fondo2.png");
+            border-radius: 0px 0px 0px 0px;
+        }
+
+
+        .rectangulo-superior-flotante{
+   
+            position: absolute;
+            width: auto;
+            height: 94px;
+            left: 10px;
+            right: 10px;
+            top: 10px;
+
+            background: #5CB760;
+            border-radius: 0px 50px 0px 0px;
+        }
+
+        .rectangulo-Bienvenida{
+            position: absolute;
+            width: auto;
+            height: 150px;
+            left: 10px;
+            right: 10px;
+            top: 265px;
+            background: linear-gradient(180deg, rgba(92, 183, 96, 0.75) 0%, rgba(203, 29, 196, 0.75) 100%);
+            border-radius: 0px 0px 0px 0px;
+
+        }
+        .rectangulo-info-inferior{
+            position: absolute;
+            width:auto;
+            height: auto;
+            min-height: 150px;
+            /* top: 420px; */
+            left: 10px;
+            right: 10px;
+            bottom: 60px;
+
+
+            background: rgba(92, 183, 96, 0.65);
+            border-radius: 0px 50px 0px 50px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .img-logo{
+            position: absolute;
+            width: 150px;
+            height: 62px;
+            left: 5%;
+            top: 15px;
+            background-image: url("../img/logo.png") ;
+            margin: 0px;
+            padding: 0px;
+            background-size: cover;
+        }
+
+        .parrafoSuperior{
+            display: none;
+            /*position: absolute;
+            width: auto;
+            height: auto;
+            left: 20px;
+            right: 20px;
+            max-height: 180px;
+            top: 10px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 20px;
+            color: #FFFFFF;
+
+            margin: 0px;
+            padding: 0px;*/
+        }
+
+
+        .texto-login{
+            position: absolute;
+            width: 126px;
+            right: 15px;
+            height: 20px;
+            top: 60px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 21px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+
+  
+        .texto-rectangulo-inferior{
+            position: absolute;
+            width: auto;
+            height: 50px;
+            left: 5px;
+            right: 5px;
+            top: 35px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+
+            margin: 0px;
+            padding: 0px;
+        }
+        .contacto{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            /* margin-left: -442px; */
+            /* left: -150px; */
+            left: -10px;
+            margin-bottom: -50px ;
+            bottom: 0px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0px;
+            padding: 0px;
+        }
+        /*
+        .contenedor-parrafo-bienvenida{
+            position: absolute;
+            width: auto;
+            height: 100px;
+            left: 3px;
+            right: 2px;
+            top:110px;
+            background: #5CB760;
+       }
+       */
+
+        .texto-bienvenida{
+            position: absolute;
+            width: auto;
+            height: auto;
+            left: 20px;
+            right: 20px;
+            top: 200px;
+            margin-left: -170px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+
+    

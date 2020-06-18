@@ -1,0 +1,310 @@
+.NUEVA-RECTANGULO-FONDO{
+    position: absolute;
+    width: 360px;
+    height: 550px;
+    margin-left: -180px;
+    left: 50%;
+    top: 20%;
+    bottom: 20%;
+    background: linear-gradient(180deg, rgba(92, 183, 96, 1) 0%, rgba(203, 29, 196, 1) 100%);
+    
+}
+
+.NUEVA-TXT-TITULO{
+    position: absolute;
+    width: 326px;
+    height: 26px;
+    margin-left: -163px;
+    left: 50%;
+    top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.NUEVA-TXT-FECHA{
+    position: absolute;
+    width: 139px;
+    height: 25px;
+    right: 55%;
+    top: 80px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.NUEVA-INPUT-FECHA{
+    position: absolute;
+    width: 176px;
+    height: 25px;
+    /* left: 164px; */
+    left: 45%;
+    margin-top: 25px;
+    top: 80px;
+    background: #FFFFFF;
+}
+
+.NUEVA-TXT-DESCRIPCION{
+    position: absolute;
+    width: 324px;
+    height: 25px;
+    margin-left: -162px;
+    left: 50%;
+    top: 140px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.NUEVA-TXTTAREA-DESCRIPCION{
+    position: absolute;
+    width: 320px;
+    height: 201px;
+    margin-left: -160px;
+    left: 50%;
+    top: 200px;
+    background: #FFFFFF;
+}
+
+.NUEVA-TXT-ESTADO{
+    position: absolute;
+    width: 139px;
+    height: 25px;
+    right: 50%;
+    top: 400px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.NUEVA-INPUTLIST-ESTADO{
+    position: absolute;
+    width: 150px;
+    height: 33px;
+    margin-top: 33px;
+    left: 50%;
+    top: 389px;
+    background: #5CB760;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.NUEVA-RECTANGULO-BTN-CANCELAR{
+    position: absolute;
+    width: 156px;
+    height: 34px;
+    right:52%;
+    top: 485px;
+    background: #E81818;
+    border: 1px solid #FA16FF;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.NUEVA-RECTANGULO-BTN-ACEPTAR{
+    position: absolute;
+    width: 157px;
+    height: 34px;
+    left: 51%;
+    top: 485px;
+    background: #5CB760;
+    border: 1px solid #FA16FF;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+/* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 620  PX   <----////////     */
+
+@media all and (max-device-width: 480px){
+
+    .NUEVA-RECTANGULO-FONDO{
+        position: absolute;
+        width: 360px;
+        height: 550px;
+        margin-left: -180px;
+        left: 50%;
+        top: 20%;
+        bottom: 20%;
+        background-color: chocolate;
+        background: linear-gradient(180deg, #23DA2B 0%, #CB1DC4 100%);
+    }
+    .NUEVA-TXT-TITULO{
+        position: absolute;
+        width: 324px;
+        height: 26px;
+        margin-left: -163px;
+        left: 50%;
+        top: px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .NUEVA-TXT-FECHA{
+        position: absolute;
+        width: 139px;
+        height: 25px;
+        right: 55%;
+        top: 65px;
+    
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .NUEVA-INPUT-FECHA{
+        position: absolute;
+        width: 176px;
+        height: 25px;
+        left: 45%;
+        margin-top: 25px;
+        top: 65px;
+        background: #FFFFFF;
+    }
+    
+    .NUEVA-TXT-DESCRIPCION{
+        position: absolute;
+        width: 324px;
+        height: 25px;
+        margin-left: -162px;
+        left: 50%;
+        top: 120px;
+    
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    .NUEVA-TXTTAREA-DESCRIPCION{
+        position: absolute;
+        width: 320px;
+        height: 201px;
+        margin-left: -160px;
+        left: 50%;
+        top: 180px;
+        background: #FFFFFF;
+    }
+    
+    .NUEVA-TXT-ESTADO{
+        position: absolute;
+        width: 139px;
+        height: 25px;
+        right: 50%;
+        top: 373px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .NUEVA-INPUTLIST-ESTADO{
+        position: absolute;
+        width: 150px;
+        height: 33px;
+        margin-top: 33px;
+        left: 50%;
+        top: 360px;
+        background: #5CB760;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .NUEVA-RECTANGULO-BTN-CANCELAR{
+        position: absolute;
+        width: 156px;
+        height: 34px;
+        right:52%;
+        top: 465px;
+        background: #E81818;
+        border: 1px solid #FA16FF;
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    
+    .NUEVA-RECTANGULO-BTN-ACEPTAR{
+        position: absolute;
+        width: 157px;
+        height: 34px;
+        left: 51%;
+        top: 465px;
+        background: #5CB760;
+        border: 1px solid #FA16FF;
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+
+    }
+
+}
