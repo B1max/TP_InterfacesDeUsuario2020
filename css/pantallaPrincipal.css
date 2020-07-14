@@ -1,16 +1,21 @@
 .DIV_PPimgBienvenida{
+  background-color: blueviolet;
+
+  
   position: absolute;
   width: 640px;
-  height: 500 px;
+  height: 500px;
   margin-left: -320px;
   left: 50%;
-  margin-top: -250px;
-  top: 50%;
+  /* margin-top: 200px; */
+  top: 300px;
+  /* left: 0px;
+  top: 0px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../img/fondoBienvenida.png") ;
   background-color: blueviolet;
-  border-radius: 0px 80px 0px 50px;
+  border-radius: 0px 40px 0px 40px;
 }
 
 @media all and (max-device-width: 480px){

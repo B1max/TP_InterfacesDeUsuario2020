@@ -1,69 +1,44 @@
-.MSbtnMenu{
+.MSbtns , .MSbtnMenu, .MSbtnMisSolicitudes , .MSbtnUsuarios, .MSbtnSalir{
     position: absolute;
-    width: 90px;
+    width: 100px;
     height: 40px;
-    top:2px;
-    left:270px;
-    background-color: coral;
+    right: 0px;
     background: #519856;
     border: 2px solid #CB1DC4;
     box-sizing: border-box;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height:20px;
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
 }
+.MSbtnMenu{
+    top:0px;
+}
 .MSbtnMisSolicitudes{
-    position: absolute;
-    width: 90px;
-    height: 70px;
-    top:45px;
-    left:-1px;
-    background-color: coral;
-    background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
+    top:40px;
+}
+.MSbtnUsuarios{
+    top:80px;
 }
 .MSbtnSalir{
-    position: absolute;
-    width: 89px;
-    height: 50px;
     top:120px;
-    left:-1px;
-    background-color: coral;
-    background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 
 /* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 620  PX   <----////////     */
 @media all and (max-device-width: 480px){
 
-    .MSbtnMenu{
+    .MSbtnMenu, .MSbtnMisSolicitudes, .MSbtnSalir, .MSbtnUsuarios{
         position: absolute;
         width: 110px;
         height: 35px;
         top:0px;
-        left:50%;
+        /* left:50%; */
+        right: 0px;
         margin-left: -55px;
         background-color: coral;
         background: #519856;
@@ -78,40 +53,13 @@
         cursor: pointer;
     }
     .MSbtnMisSolicitudes{
-        position: absolute;
-        width: 110px;
-        height: 50px;
-        top:32px;
-        left:50%;
-        margin-left: -55px;
-        background-color: coral;
-        background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
+        top:35px;
+    }
+    .MSbtnUsuarios{
+        top:70px;
     }
     .MSbtnSalir{
-        position: absolute;
-        width: 110px;
-        height: 40px;
-        top:70px;
-        left:50%;
-        margin-left: -55px;
-        background-color: coral;
-        background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
+        top:105px;
     }
 
 

@@ -2,8 +2,15 @@ let USUARIOS = [];
 let JSON_USUARIOS_CARGADO = false;
 let DB_MS_seleccionados = [];
 let DB_MS_solicitudes = [];
+let DB_MS_indice = 0;
 let USUARIOS_seleccion = [];
 let USUARIOS_IDs_tabla =[];
+let usuario_actual;
+
+function MS_indice(){
+    return DB_MS_indice++;
+}
+
 const DB_urlsAvatar = [
     "https://gravatar.com/avatar/ab3ef817e400dbddf665041ca1a55051?s=100&d=mp&r=x",
     "https://robohash.org/f79d8337d36910053a2d80563f9db3040?set=set4&bgset=&size=100x100",
@@ -17,12 +24,43 @@ const DB_urlsAvatar = [
     "https://gravatar.com/avatar/eb1e0a45a4c29acd4567748e432df5a8?s=100&d=robohash&r=x"
 ];
 
+class db{
 
+    myDB = [];
+
+    nuevo(datos){
+        this.myDB.push(datos);
+    }
+
+    actualizar(indiceDB,indiceDato,datoNuevo){
+        try{
+            myDB[indiceDB][indiceDato] = datoNuevo;
+            return true;
+        }catch (e){
+            logs.push(e);
+            return false;
+        }
+    }
+
+    borrar(id){
+
+    }
+
+    get(subIndice, dato){
+        retorno = null;
+        this.myDB.forEach(item=>{
+            if(item[subIndice]==dato){
+                retorno = item;
+            }
+        })
+        return retorno;
+    }
+
+}
 
 async function DB_traer_JSON_MS(){
     if(JSON_Cargado==false){
         JSON_Cargado=true;
-        //trae los datos de tabla.json para Mis Solicitudes
         return fetch('./json/tabla.json')
         .then(result=> result.json())
         .then(async (ar)=>{
@@ -32,7 +70,8 @@ async function DB_traer_JSON_MS(){
                 let fecha = arr[i]['Fecha Solicitud'];
                 let desc = arr[i]['Descripción'];
                 let estado = arr[i]['Estado'];
-                await DB_agregar_item("JSON",fecha,desc,estado);
+                let Usuario = arr[i]['Usuario'];
+                await DB_agregar_item(MS_indice(),"JSON",fecha,desc,estado,Usuario);
             }
         })
     }
@@ -40,10 +79,10 @@ async function DB_traer_JSON_MS(){
 
 
 
+
 function DB_traer_JSON_USERS(){
     if(JSON_USUARIOS_CARGADO == false){
         JSON_USUARIOS_CARGADO = true;
-        //trae los datos de usuarios.json para usuarios
         return fetch('./json/usuarios.json')
         .then(result=> result.json())
         .then(async (ar)=>{
@@ -64,8 +103,9 @@ function DB_traer_JSON_USERS(){
 }
 
 
+
+
 function DB_BUSCAR_USUARIO(user,pass){
-    //devuelve una lista con las coincidencias, usuarios
     let respuesta = false;
     let usuarioEncontrado;
     for(let i = 0;i<USUARIOS.length;i++){
@@ -82,15 +122,19 @@ function DB_BUSCAR_USUARIO(user,pass){
 }
 
 
-async function DB_agregar_item(origen,fecha,descripcion,estado){
-    DB_MS_solicitudes.push([itemIndex,origen,fecha,descripcion,estado]);
-    console.log("se agrego el item->"+itemIndex+"-"+origen+"-"+fecha+"-"+descripcion+"-"+estado)
-    itemIndex++;
+
+
+async function DB_agregar_item(indice,origen,fecha,descripcion,estado,usuario){
+    DB_MS_solicitudes.push([indice,origen,fecha,descripcion,estado,usuario]);
+    console.log("se agrego el item->"+indice+"-"+origen+"-"+fecha+"-"+descripcion+"-"+estado+"-"+usuario)
+    // itemIndex++;
     return DB_MS_solicitudes.length-1;
 }
 
+
+
+
 async function DB_borrar_JSON(){
-    //borra todos los items del array listaSOlicitudes con el origen JSON , item[x][1]
     let listaNormal =[];
     for(let i = 0;i<DB_MS_solicitudes.length;i++){
         if(DB_MS_solicitudes[i][1]!="JSON"){
@@ -100,20 +144,19 @@ async function DB_borrar_JSON(){
     DB_MS_solicitudes = listaNormal;
 }
 
+
+
+
 async function DB_borrar_seleccionados(){
-    // borrarBotones();
-    MENU_borrar_botones();
+    // MENU_misSolicitudes_borrarBotones();
     if(todosSeleccionados){
         document.getElementById("checkAll").checked = false;
     }
     for(let i = 0;i<DB_MS_seleccionados.length;i++){
         let id = DB_MS_seleccionados[i];
         DB_MS_solicitudes.splice(DB_MS_solicitudes.indexOf(id),1);
-        // document.getElementById("check"+id).removeEventListener("click",function(){});
         UTIL_BORRAR_HTML_pID(["colFecha"+id,"colDescripcion"+id,"colEstado"+id,"check"+id,"colCheck"+id,"item"+id],"DB_borrar_seleccionados")
     }
     DB_MS_seleccionados = []
-    await MS_eventos();
-
-    // TABLA_recargar_lista();
+    // await MS_eventos();
 }

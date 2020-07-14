@@ -1,4 +1,4 @@
-.colAvatar{
+.colAvatarm, .colNombre, .colActivo{
   width: 15%;
   font-family: Roboto;
   font-style: normal;
@@ -9,7 +9,7 @@
   color: #FFFFFF;
 }
 
-
+/*
 .colNombre{
   width: 15%;
   font-family: Roboto;
@@ -31,4 +31,4 @@
   line-height: 28px;
   text-align: center;
   color: #FFFFFF;
-}
+}*/

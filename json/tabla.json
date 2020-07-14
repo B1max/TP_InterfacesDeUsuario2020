@@ -3,17 +3,21 @@
         {
             "Fecha Solicitud": "2020-03-30",
             "Descripción": "Pedido de notebook",
-            "Estado": "Abierta"
+            "Estado": "Abierta",
+            "Usuario":"30337591"
+
         },
         {
             "Fecha Solicitud": "2020-04-03",
             "Descripción": "Cambio de horario",
-            "Estado": "En progreso"
+            "Estado": "En progreso",
+            "Usuario":"87654321"
         },
-        {
+        { 
             "Fecha Solicitud": "2020-05-12",
             "Descripción": "Pedido de una bicicleta para llegar a la universidad",
-            "Estado": "Cerrada"
+            "Estado": "Cerrada",
+            "Usuario":"87654321"
         }
     ]
 }

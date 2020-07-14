@@ -1,50 +1,53 @@
-// const botonLogear = document.getElementById("BotonLogear");
-const usuariosLogin = [
-    ['30337591','dario83']
-];
-let LOGIN_IDs = [
-    "elementoMenu0","elementoMenu1","elementoMenu2","elementoMenu3","elementoMenu4",
-    "elementoMenu5","elementoMenu8","elementoMenu6","elementoMenu7"];
+class login extends pantalla{
+    static punto_inicial = "contenedor";
+    static menuAsociado = null;
 
-let LOGIN_html = [
-    "<div id='elementoMenu0' class='menu-fondo'>esto es del menu</div>",
-    "<div id='elementoMenu1' class='ventanaColoreada'>",
-    "<div id='elementoMenu2' class='txtIngresar'>INGRESAR</div>",
-    "<div id='elementoMenu3' class='USUARIO_CONTRASEÑA'>USUARIO: <br>CONTRASEÑA: </div>",
-    "<input id='elementoMenu4' class='ingresoDeUsuario' type='text' name='usuario' id='usuario'>",
-    "<input id='elementoMenu5' class='ingresoDeContraseña' type='password' name='contraseña' id='contraseña'>",
-    "<p id='elementoMenu8' class='loginResultado'></p>",
-    "<div id='elementoMenu6' class='BotonAceptar'></div>",
-    "<div id='elementoMenu7' class='ACEPTAR'>ACEPTAR</div></div>"
-];
+    static ids_general = ["elementoMenu0","elementoMenu1","elementoMenu2","elementoMenu3","elementoMenu4",
+    "elementoMenu5","elementoMenu8","elementoMenu6","elementoMenu7","btnRegistrar"];
 
+    static html_general = [
+        "<div id='elementoMenu0' class='menu-fondo'>esto es del menu</div>",
+        "<div id='elementoMenu1' class='ventanaColoreada'>",
+        "<div id='elementoMenu2' class='txtIngresar'>INGRESAR</div>",
+        "<div id='elementoMenu3' class='USUARIO_CONTRASEÑA'>USUARIO: <br>CONTRASEÑA: </div>",
+        "<input id='elementoMenu4' class='ingresoDeUsuario' type='text' name='usuario' id='usuario'>",
+        "<input id='elementoMenu5' class='ingresoDeContraseña' type='password' name='contraseña' id='contraseña'>",
+        "<p id='elementoMenu8' class='loginResultado'></p>",
+        "<div id='elementoMenu6' class='BotonAceptar'></div>",
+        "<div id='elementoMenu7' class='ACEPTAR'>ENTRAR</div>",
+        "<div id='btnRegistrar' class='BotonRegistrar'>REGISTRAR</div></div>",
+    ];
 
+    static eventos = async function(){
+        await INDEX_salir();
+        await DB_traer_JSON_MS();
 
+        document.getElementById(this.ids_general[7]).addEventListener("click", async function(){
+            await LOGIN_validar_UserPass();
+        });
 
-async function LOGIN_cargar(){
-    INDEX_ocultar_bienvenida()
-    UTIL_dibujar_HTML(LOGIN_html);
-    LOGIN_eventos();
+        document.getElementById(this.ids_general[8]).addEventListener("click", async function(){
+            await LOGIN_validar_UserPass();
+        });
+
+        document.getElementById(this.ids_general[0]).addEventListener("click",function(){
+            login.salir();
+            INDEX_CARGAR();
+        });
+
+        document.getElementById("btnRegistrar").addEventListener("click",function(){
+            DB_traer_JSON_MS();
+            class my_pantalla extends Usuario_nuevo{
+             static menuAsociado = new menu();
+             static pantalla_origen = login;
+            }
+            my_pantalla.cargar();
+        });
+
+    }
 }
 
 
-
-
-function LOGIN_eventos(){
-    document.getElementById("elementoMenu6").addEventListener("click", async function(){
-        console.log("se apreto el boton cancelar");
-        await LOGIN_validar_UserPass();
-    });
-    document.getElementById("elementoMenu7").addEventListener("click", async function(){
-        console.log("se apreto el boton aceptar");
-        await LOGIN_validar_UserPass();
-
-    });
-    document.getElementById("elementoMenu0").addEventListener("click",function(){
-        LOGIN_salir();
-        INDEX_mostrar_bienvenida();
-    });
-}
 
 
 
@@ -68,8 +71,8 @@ function LOGIN_validar_contraseña(cont){
     'f','g','h','j','k','l','ñ','z','x','c','v','b','n','m','Q','W','E',
     'R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Ñ',
     'Z','X','C','V','B','N','M'];
-    let tieneUnNumero = false
-    let tieneUnaLetra = false
+    let tieneUnNumero = false;
+    let tieneUnaLetra = false;
     let palabra = Array.from(cont.value);
     palabra.forEach((caracter)=>{
         letras.forEach((letra)=>{if(caracter == letra){tieneUnaLetra = true}})
@@ -102,17 +105,14 @@ async function LOGIN_validador(){
     if(usuarioValido && contValida && DB_BUSCAR_USUARIO(usuario.value,cont.value)){
         //si hay al menos una coincidencia
         console.log("usuario : ("+usuario.value+")y contraseña : ("+cont.value+") valido");
-        //borra los objetos de mas
-        await LOGIN_salir();
-        try{
-            PP_borrarBienvenida();
-        }catch(err){
-            console.log("no se pudo eliminar algo->"+err);
-        }
+        usuario_actual = usuario.value+"";
+        login.salir();
         await INDEX_salir();
-        await PP_cargar();
+        INDEX_ocultar_bienvenida();
+        principal.cargar();
         return true;
     }else{
+        usuario_actual = "";
         LOGIN_imprimir_resultado("Usuario o contraseña incorrecta");
         console.log("usuario : ("+usuario.value+")y contraseña : ("+cont.value+") no valido");
         return false;
@@ -122,25 +122,10 @@ async function LOGIN_validador(){
 
 
 
-
 function LOGIN_imprimir_resultado(txt){
-    console.log(txt);
     const resultado = document.getElementById("elementoMenu8");
     resultado.textContent = txt+"";
     setTimeout(function(){
         resultado.textContent = " ";
     },2000);
-}
-
-
-
-
-async function LOGIN_salir(){
-    LOGIN_IDs.forEach(item =>{
-        try {
-            document.getElementById(item).remove();
-        } catch (error) {
-            console.log("no se pudo borrar el HTML de login");
-        }
-    })
 }

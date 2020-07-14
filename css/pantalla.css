@@ -7,6 +7,7 @@
     height: 1023px;
 }
 
+/*login*/
 .ventanaColoreada{
 
     position: absolute;
@@ -54,7 +55,7 @@
     color: #FFFFFF;
 }
 
-.ingresoDeUsuario{
+.ingresoDeUsuario, .ingresoDeContraseña{
  
     position: absolute;
     width: 205px;
@@ -67,18 +68,12 @@
 }
 
 .ingresoDeContraseña{
-
-    position: absolute;
-    width: 205px;
-    margin-left: 40px;
-    height: 35px;
     left: 50%;
     top: 420px;
-    background: #FFFFFF;
-    font-size: 24px;
-}
 
-.BotonAceptar{
+
+}
+.BotonAceptar, .BotonRegistrar, .ACEPTAR{
     cursor: pointer;
     position: absolute;
     width: 180px;
@@ -91,15 +86,10 @@
     box-sizing: border-box;
 }
 
-.ACEPTAR{
-    cursor: pointer;
 
-    position: absolute;
-    width: 180px;
-    margin-left: -90px;
+.ACEPTAR,.BotonRegistrar{
+    border: none;
     height: 25px;
-    left: 50%;
-    top: 525px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -108,14 +98,11 @@
     text-align: center;
     color: #FFFFFF;
 }
-
+.BotonRegistrar{
+    height: 35px;
+    top:570px;
+}
 .loginResultado{
-    position: absolute;
-    width: 300px;
-    margin-left: -150;
-    left: 50%;
-    height: 25px;
-    top: 550px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -123,6 +110,15 @@
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+
+    position: absolute;
+    width: 300px;
+    margin-left: -150;
+    left: 50%;
+    height: 25px;
+    top: 550px;
+
+    
 }
 
 .alerta{

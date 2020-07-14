@@ -9,14 +9,8 @@
     background: linear-gradient(180deg, rgba(92, 183, 96, 1) 0%, rgba(203, 29, 196, 1) 100%);
     
 }
-
-.NUEVA-TXT-TITULO{
-    position: absolute;
-    width: 326px;
-    height: 26px;
-    margin-left: -163px;
-    left: 50%;
-    top: 10px;
+.NUEVA-TXT-TITULO,.NUEVA-TXT-FECHA, .NUEVA-TXT-DESCRIPCION,
+ .NUEVA-TXT-ESTADO, .NUEVA-INPUTLIST-ESTADO, .NUEVA-RECTANGULO-BTN-CANCELAR, .NUEVA-RECTANGULO-BTN-ACEPTAR{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -26,6 +20,16 @@
     color: #FFFFFF;
 }
 
+.NUEVA-TXT-TITULO{
+    position: absolute;
+    width: 326px;
+    height: 26px;
+    margin-left: -163px;
+    left: 50%;
+    top: 10px;
+
+}
+
 .NUEVA-TXT-FECHA{
     position: absolute;
     width: 139px;
@@ -33,13 +37,6 @@
     right: 55%;
     top: 80px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 .NUEVA-INPUT-FECHA{
@@ -61,13 +58,6 @@
     left: 50%;
     top: 140px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 
@@ -87,13 +77,7 @@
     height: 25px;
     right: 50%;
     top: 400px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
+
 }
 
 .NUEVA-INPUTLIST-ESTADO{
@@ -104,17 +88,9 @@
     left: 50%;
     top: 389px;
     background: #5CB760;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
-.NUEVA-RECTANGULO-BTN-CANCELAR{
+.NUEVA-RECTANGULO-BTN-CANCELAR, .NUEVA-RECTANGULO-BTN-ACEPTAR{
     position: absolute;
     width: 156px;
     height: 34px;
@@ -124,13 +100,6 @@
     border: 1px solid #FA16FF;
     box-sizing: border-box;
     cursor: pointer;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 .NUEVA-RECTANGULO-BTN-ACEPTAR{
@@ -139,17 +108,9 @@
     height: 34px;
     left: 51%;
     top: 485px;
-    background: #5CB760;
-    border: 1px solid #FA16FF;
-    box-sizing: border-box;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: #FFFFFF;
-    cursor: pointer;
+    background: rgb(16, 241, 110);
+
+
 }
 /* \\\\\\ ----> LA VERSION MOVIL ESTA DISEÑADA PARA UNA RESOLUCION DE 320 X 620  PX   <----////////     */
 
@@ -166,13 +127,9 @@
         background-color: chocolate;
         background: linear-gradient(180deg, #23DA2B 0%, #CB1DC4 100%);
     }
-    .NUEVA-TXT-TITULO{
-        position: absolute;
-        width: 324px;
-        height: 26px;
-        margin-left: -163px;
-        left: 50%;
-        top: px;
+    .NUEVA-TXT-TITULO, .NUEVA-TXT-FECHA, .NUEVA-TXT-DESCRIPCION, 
+    .NUEVA-TXT-ESTADO, .NUEVA-INPUTLIST-ESTADO, 
+    .NUEVA-RECTANGULO-BTN-CANCELAR, .NUEVA-RECTANGULO-BTN-ACEPTAR{
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -181,7 +138,15 @@
         text-align: center;
         color: #FFFFFF;
     }
-    
+    .NUEVA-TXT-TITULO{
+        position: absolute;
+        width: 324px;
+        height: 26px;
+        margin-left: -163px;
+        left: 50%;
+        top: px;
+    }
+
     .NUEVA-TXT-FECHA{
         position: absolute;
         width: 139px;
@@ -189,13 +154,6 @@
         right: 55%;
         top: 65px;
     
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
     }
     
     .NUEVA-INPUT-FECHA{
@@ -215,17 +173,8 @@
         margin-left: -162px;
         left: 50%;
         top: 120px;
-    
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: rgb(255, 255, 255);
     }
-    
-    
+     
     .NUEVA-TXTTAREA-DESCRIPCION{
         position: absolute;
         width: 320px;
@@ -242,13 +191,6 @@
         height: 25px;
         right: 50%;
         top: 373px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
     }
     
     .NUEVA-INPUTLIST-ESTADO{
@@ -259,13 +201,6 @@
         left: 50%;
         top: 360px;
         background: #5CB760;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
     }
     
     .NUEVA-RECTANGULO-BTN-CANCELAR{
@@ -277,13 +212,6 @@
         background: #E81818;
         border: 1px solid #FA16FF;
         box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
         cursor: pointer;
     }
     
@@ -296,15 +224,7 @@
         background: #5CB760;
         border: 1px solid #FA16FF;
         box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
         cursor: pointer;
-
     }
 
 }

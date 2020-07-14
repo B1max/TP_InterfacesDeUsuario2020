@@ -1,5 +1,5 @@
 
-.botonMenu{
+.botonMenu, .botonNuevo, .botonModificar, .botonEliminar, .botonSalir{
     position: absolute;
     width: 170px;
     height: 40px;
@@ -22,92 +22,44 @@
 
 
 .botonNuevo{
-    position: absolute;
-    width: 170px;
-    cursor: pointer;
-    height: 40px;
-    left: 210px;
-    top: 160px;
+    /* height: 40px; */
+    /*  +20  */
+    top: 185px;
+    /* left: 210px; */
     background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    border-radius: 0px 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    color: #FFFFFF;
+    /* top: 135px; */
 }
 
 
 .botonModificar{
-    position: absolute;
-    width: 170px;
-    cursor: pointer;
-    height: 40px;
-    left: 400px;
-    top: 160px;
+    /* height: 40px; */
+    /* left: 400px; */
+    top: 235px;
     background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    border-radius: 0px 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    color: #FFFFFF;
 }
+
 
 .botonEliminar{
-    position: absolute;
-    width: 170px;
-    cursor: pointer;
-    height: 40px;
-    left: 590px;
-    top: 160px;
+    /* height: 40px; */
+    top: 285px;
+    /* left: 590px; */
     background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    border-radius: 0px 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    color: #FFFFFF;
 }
 
+
 .botonSalir{
-    position: absolute;
-    width: 170px;
-    height: 40px;
-    left: 780px;
-    top: 160px;
+    /* height: 40px; */
+    /* left: 780px; */
+    top: 335px;
     background: #519856;
-    border: 2px solid #CB1DC4;
-    box-sizing: border-box;
-    border-radius: 0px 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 38px;
-    text-align: center;
-    color: #FFFFFF;
-    cursor: pointer;
 }
 
 
 @media all and (max-width: 480px){
 
-    .botonMenu{
+    .botonMenu, .botonNuevo, .botonModificar, .botonEliminar, .botonSalir{
         position: absolute;
-        width: 89px;
+        width: 100px;
         height: 50px;
         margin-left: -45px;
         left:70%;
@@ -117,81 +69,37 @@
         border: none;
         color: #FFFFFF;
         background-size: cover;
-
+        border-radius: 0px 0px 0px 0px;
+        font-size: 14px;
     }
     
     
     .botonNuevo{
-        position: absolute;
-        width: 33%; 
-        height: 50px;
-        left: 215px;
-        top: 110px;
+        left:70%;
+        top: 125px;
         background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
-        cursor: pointer;
     }
     
     
     .botonModificar{
-        position: absolute;
-        width: 33%; 
-        height: 50px;
-        left: 215px;
-        top: 160px;
+        left:70%;
+        top: 175px;
         background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
-        cursor: pointer;
     }
     
+
     .botonEliminar{ 
-        position: absolute;
-        width: 32%; 
-        height: 50px;
-        left: 217px;
-        top: 210px;
+        left:70%;
+        top: 225px;
         background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
-        cursor: pointer;
     }
     
+
     .botonSalir{
-        position: absolute;
-        width: 32%;
-        height: 50px;
-        left: 217px;
+        left:70%;
         top: 260px;
         background: #519856;
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        line-height: 28px;
-        text-align: center;
-        color: #FFFFFF;
-        cursor: pointer;
     }
+
 
 }
